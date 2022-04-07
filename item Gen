@@ -1,0 +1,36 @@
+#include<iostream>
+#include<ctime>
+using namespace std;
+
+void Item(char location);
+
+int main() {
+	srand(time(NULL));
+	while (1) {
+		Item('d');
+		system("pause");
+	}
+}
+
+void Item(char location) {
+	if (location == 'd') {
+		int num = rand() % 100 + 1;
+		if (num <= 20)
+			cout << "you recieved a potion!" << endl << endl;
+		else if (num <= 50)
+			cout << "you recived 1 GP!" << endl << endl;
+		else if (num <= 90)
+			cout << "You recieved 1 ration !" << endl << endl;
+		else
+			cout << "you received boots!" << endl << endl;
+	}
+	else if (location == 'f') {
+		int num = rand() % 100 + 1;
+		if (num <= 50)
+			cout << "you recieved 1 ration!" << endl << endl;
+		else if (num <= 80)
+			cout << "you recieved socks!" << endl << endl;
+		else
+			cout << "You recieved nothing" << endl << endl;
+	}
+}
