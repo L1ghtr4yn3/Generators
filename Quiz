@@ -1,0 +1,33 @@
+#include<iostream>
+#include<ctime>
+using namespace std;
+
+void NPC(char character);
+
+int main() {
+	srand(time(NULL));
+	while (1) {
+		NPC('V');
+		system("pause");
+	}
+}
+
+void NPC(char character) {
+	int num = rand() % 100 + 1;
+	if (character == 'P') {
+		if (num <= 25)
+			cout << "Shiver me timbers!" << endl << endl;
+		else if (num <= 60)
+			cout << "Walk the plank!" << endl << endl;
+		else
+			cout << "ARRR!" << endl << endl;
+	}
+	else if (character == 'V') {
+		if (num <= 10)
+			cout << "nice weather today mate!" << endl << endl;
+		else if (num <= 80)
+			cout << "the potato crops are good this year!" << endl << endl;
+		else
+			cout << "Geez taxes suck" << endl << endl;
+	}
+}
